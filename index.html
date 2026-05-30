@@ -26,10 +26,10 @@
         Frontend-разработка с акцентом на чистый UI, понятную структуру и визуальную эстетику.
       </p>
       <nav class="hero-links">
-        <a href="#about">Обо мне</a>
-        <a href="#skills">Навыки</a>
-        <a href="#projects">Проекты</a>
-        <a href="#contact">Контакты</a>
+        <a href="#about" class="js-scroll">Обо мне</a>
+        <a href="#projects" class="js-scroll">Что делаю</a>
+        <a href="#contact" class="js-scroll">Связаться</a>
+        <a href="https://github.com/Qumaqwe" target="_blank" rel="noreferrer">GitHub</a>
       </nav>
     </header>
 
@@ -67,11 +67,14 @@
       <article class="card" id="contact">
         <h2>Контакты</h2>
         <p>Открыт к сотрудничеству и новым задачам.</p>
-        <ul class="list">
-          <li>Email: <a href="mailto:hello@example.com">hello@example.com</a></li>
-          <li>Telegram: <a href="https://t.me/username" target="_blank" rel="noreferrer">@username</a></li>
-          <li>GitHub: <a href="https://github.com/Qumaqwe" target="_blank" rel="noreferrer">Qumaqwe</a></li>
-        </ul>
+        <div class="contact-actions">
+          <button id="copy-contact" type="button" data-email="hello@example.com">
+            Скопировать email
+          </button>
+          <a href="mailto:hello@example.com">Написать на email</a>
+          <a href="https://github.com/Qumaqwe" target="_blank" rel="noreferrer">Открыть GitHub</a>
+        </div>
+        <p class="contact-hint">Подставим ваши реальные контакты в следующей итерации.</p>
       </article>
     </section>
   </main>

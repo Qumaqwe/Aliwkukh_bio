@@ -119,6 +119,11 @@ h2 {
   transform: translateY(-1px);
 }
 
+.hero-links a.is-active {
+  border-color: var(--accent);
+  color: #fbf3e2;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -152,6 +157,38 @@ p {
 
 .list li {
   margin-bottom: 0.35rem;
+}
+
+.contact-actions {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.contact-actions a,
+.contact-actions button {
+  border: 1px solid var(--accent-soft);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  background: transparent;
+  color: var(--text-main);
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.contact-actions a:hover,
+.contact-actions button:hover {
+  border-color: var(--accent);
+  color: #fbf3e2;
+}
+
+.contact-hint {
+  margin-top: 0.7rem;
+  color: #9f9686;
+  font-size: 0.93rem;
 }
 
 a {
