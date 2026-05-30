@@ -6,7 +6,7 @@
   <title>Aliwkukh | Визитка</title>
   <meta
     name="description"
-    content="Личная визитка в тёмной матовой эстетике: обо мне, проекты, контакты и формат сотрудничества."
+    content="Личная AppSec-визитка: аудит рисков, secure-by-design подход, контакты и проекты."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +17,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="binary-bg" aria-hidden="true">
+    <p>01001001 01001110 01010100 01000101 01000111 01010010 01001001 01010100 01011001</p>
+    <p>11010010 00101101 01100101 01101110 01100011 01101111 01100100 01100101 00101101</p>
+    <p>00110000 00110001 00110000 00110001 00110001 00110000 00110000 00110001 00110001</p>
+    <p>SECURE-BY-DESIGN // THREAT-MODELING // CODE-REVIEW // HARDENING // MONITORING</p>
+    <p>01100100 01100101 01100110 01100101 01101110 01110011 01100101 00101101 01101001</p>
+    <p>APPSEC APPSEC APPSEC APPSEC APPSEC APPSEC APPSEC APPSEC APPSEC APPSEC APPSEC</p>
+  </div>
   <div class="grain"></div>
   <main class="container">
     <header class="hero card">
-      <p class="eyebrow">personal card</p>
+      <p class="eyebrow">application security profile</p>
       <h1>Aliwkukh</h1>
       <p class="lead">
-        Frontend-разработка с акцентом на чистый UI, понятную структуру и визуальную эстетику.
+        AppSec-практика с фокусом на безопасную архитектуру, снижение рисков и устойчивость продукта.
       </p>
       <nav class="hero-links">
         <a href="https://github.com/Qumaqwe" target="_blank" rel="noreferrer">Проекты</a>
@@ -35,36 +43,36 @@
       <article class="card" id="about">
         <h2>Обо мне</h2>
         <p>
-          Работаю с современным фронтендом и люблю делать спокойные, аккуратные интерфейсы.
-          В приоритете - чистый код, понятная навигация и внимание к деталям.
+          Развиваюсь в направлении Application Security: помогаю командам находить уязвимости раньше,
+          выстраивать secure-by-default подход и укреплять процессы разработки.
         </p>
       </article>
 
       <article class="card" id="skills">
-        <h2>Навыки</h2>
+        <h2>AppSec стек</h2>
         <ul class="list">
-          <li>HTML5 / CSS3</li>
-          <li>JavaScript (ES6+)</li>
-          <li>Responsive верстка</li>
-          <li>UI анимации и micro-interactions</li>
-          <li>Оптимизация производительности</li>
+          <li>Threat Modeling и security review</li>
+          <li>SAST / dependency scanning</li>
+          <li>OWASP Top 10 и secure coding практики</li>
+          <li>Hardening CI/CD и базовые security gates</li>
+          <li>Документация и security awareness</li>
         </ul>
       </article>
 
       <article class="card" id="projects">
-        <h2>Проекты</h2>
-        <p>Несколько примеров того, чем я могу быть полезен:</p>
+        <h2>Что делаю</h2>
+        <p>Какую ценность могу дать проекту:</p>
         <ul class="list">
-          <li>Лендинги и сайты-визитки под ключ</li>
-          <li>Редизайн существующих интерфейсов</li>
-          <li>Адаптация под мобильные устройства</li>
-          <li>Поддержка и развитие frontend-части</li>
+          <li>Аудит рисков на уровне фич и архитектуры</li>
+          <li>Выявление уязвимостей до продакшна</li>
+          <li>Сопровождение remediation и hardening</li>
+          <li>Поддержка security-культуры внутри команды</li>
         </ul>
       </article>
 
       <article class="card" id="contact">
         <h2>Контакты</h2>
-        <p>Открыт к сотрудничеству и новым задачам.</p>
+        <p>Открыт к задачам в AppSec, security review и техническому консалтингу.</p>
         <div class="contact-actions">
           <button id="copy-contact" type="button" data-email="hello@example.com">
             Скопировать email
