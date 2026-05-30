@@ -47,26 +47,47 @@ body {
 .binary-bg p {
   margin: 0;
   position: absolute;
-  left: -30%;
+  left: 0;
   white-space: nowrap;
   font-family: "Inter", monospace;
   font-size: clamp(0.65rem, 1.2vw, 0.9rem);
   letter-spacing: 0.25em;
   color: #96a2ad;
   text-transform: uppercase;
-  animation: code-flow 18s linear infinite;
+  transform: translate3d(-125vw, 0, 0);
+  animation: code-chaos 10s linear infinite;
 }
 
-.binary-bg p:nth-child(1) { top: 10%; animation-duration: 22s; }
-.binary-bg p:nth-child(2) { top: 24%; animation-duration: 18s; animation-delay: -6s; }
-.binary-bg p:nth-child(3) { top: 38%; animation-duration: 20s; animation-delay: -2s; }
-.binary-bg p:nth-child(4) { top: 52%; animation-duration: 15s; animation-delay: -9s; }
-.binary-bg p:nth-child(5) { top: 67%; animation-duration: 19s; animation-delay: -4s; }
-.binary-bg p:nth-child(6) { top: 82%; animation-duration: 16s; animation-delay: -11s; }
+.binary-bg p:nth-child(1) { top: 7%; animation-duration: 9s; animation-delay: -3s; --drift: 8px; }
+.binary-bg p:nth-child(2) { top: 16%; animation-duration: 10s; animation-delay: -7s; --drift: -6px; }
+.binary-bg p:nth-child(3) { top: 25%; animation-duration: 8.8s; animation-delay: -1s; --drift: 9px; }
+.binary-bg p:nth-child(4) { top: 34%; animation-duration: 11s; animation-delay: -8s; --drift: -7px; }
+.binary-bg p:nth-child(5) { top: 43%; animation-duration: 9.4s; animation-delay: -4s; --drift: 10px; }
+.binary-bg p:nth-child(6) { top: 52%; animation-duration: 8.6s; animation-delay: -10s; --drift: -8px; }
+.binary-bg p:nth-child(7) { top: 61%; animation-duration: 10.8s; animation-delay: -2s; --drift: 7px; }
+.binary-bg p:nth-child(8) { top: 70%; animation-duration: 9.2s; animation-delay: -9s; --drift: -9px; }
+.binary-bg p:nth-child(9) { top: 79%; animation-duration: 8.4s; animation-delay: -5s; --drift: 11px; }
+.binary-bg p:nth-child(10) { top: 88%; animation-duration: 10.2s; animation-delay: -6s; --drift: -7px; }
 
-@keyframes code-flow {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(160%); }
+@keyframes code-chaos {
+  0% {
+    transform: translate3d(-125vw, 0, 0);
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  52% {
+    transform: translate3d(0vw, var(--drift, 0px), 0);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translate3d(125vw, 0, 0);
+    opacity: 0;
+  }
 }
 
 .grain {
