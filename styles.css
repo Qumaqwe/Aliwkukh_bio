@@ -1,13 +1,13 @@
 :root {
   --bg-main: #f5f1e7;
   --bg-soft: #efe8da;
-  --card-bg: rgba(34, 73, 57, 0.88);
-  --card-border: rgba(186, 206, 171, 0.33);
+  --card-bg: rgba(53, 88, 117, 0.9);
+  --card-border: rgba(175, 204, 226, 0.36);
   --text-main: #322920;
   --text-muted: #8d7e67;
-  --accent: #cdb07b;
-  --accent-soft: rgba(205, 176, 123, 0.35);
-  --shadow: 0 16px 40px rgba(20, 43, 34, 0.3);
+  --accent: #d2bc8f;
+  --accent-soft: rgba(210, 188, 143, 0.38);
+  --shadow: 0 16px 40px rgba(26, 46, 64, 0.28);
 }
 
 *,
@@ -58,26 +58,26 @@ body {
   padding: 1.5rem 1.35rem;
   box-shadow: var(--shadow);
   backdrop-filter: blur(5px);
-  color: #ecf3e8;
+  color: #edf4fa;
 }
 
 .card h1,
 .card h2 {
-  color: #f4f7ef;
+  color: #f4f8fc;
 }
 
 .card p,
 .card .list,
 .card .eyebrow {
-  color: #dbe6d7;
+  color: #d8e6f1;
 }
 
 .card a {
-  color: #efddba;
+  color: #f2e4c9;
 }
 
 .card a:hover {
-  color: #f6e9d1;
+  color: #fbf1df;
 }
 
 .hero {
@@ -125,7 +125,7 @@ h2 {
 }
 
 .hero-links a {
-  color: #eef4eb;
+  color: #eef5fb;
   text-decoration: none;
   border: 1px solid var(--accent-soft);
   border-radius: 999px;
@@ -135,13 +135,13 @@ h2 {
 
 .hero-links a:hover {
   border-color: var(--accent);
-  color: #fff6e4;
+  color: #fff7e7;
   transform: translateY(-1px);
 }
 
 .hero-links a.is-active {
   border-color: var(--accent);
-  color: #fff6e4;
+  color: #fff7e7;
 }
 
 .grid {
@@ -192,7 +192,7 @@ p {
   border-radius: 999px;
   padding: 0.45rem 0.9rem;
   background: transparent;
-  color: #eef4eb;
+  color: #eef5fb;
   text-decoration: none;
   font: inherit;
   cursor: pointer;
@@ -202,12 +202,12 @@ p {
 .contact-actions a:hover,
 .contact-actions button:hover {
   border-color: var(--accent);
-  color: #fff6e4;
+  color: #fff7e7;
 }
 
 .contact-hint {
   margin-top: 0.7rem;
-  color: #cfdbc8;
+  color: #d4e2ee;
   font-size: 0.93rem;
 }
 
