@@ -104,6 +104,8 @@ body::before {
 }
 
 .card {
+  --section-accent: #b6c1cc;
+  --section-glow: rgba(182, 193, 204, 0.16);
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 18px;
@@ -111,10 +113,37 @@ body::before {
   box-shadow: var(--shadow);
   backdrop-filter: blur(5px);
   color: #e3e8ee;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
   box-shadow:
     0 18px 42px rgba(0, 0, 0, 0.52),
     0 0 0 1px rgba(197, 205, 214, 0.03),
     0 0 24px rgba(197, 205, 214, 0.08);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0.9rem;
+  right: 0.9rem;
+  top: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--section-accent), transparent);
+  opacity: 0.9;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -115px;
+  top: -125px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--section-glow), transparent 72%);
+  pointer-events: none;
 }
 
 .card h1,
@@ -138,6 +167,8 @@ body::before {
 }
 
 .hero {
+  --section-accent: #d0d8df;
+  --section-glow: rgba(208, 216, 223, 0.14);
   margin-bottom: 1.2rem;
   padding: 2.4rem 2rem;
 }
@@ -219,6 +250,7 @@ h2 {
   color: #ffffff;
   transform: translateY(-1px);
   box-shadow: 0 0 12px rgba(182, 193, 204, 0.2);
+  background: linear-gradient(180deg, rgba(182, 193, 204, 0.11), rgba(182, 193, 204, 0.02));
 }
 
 .hero-links a.is-active {
@@ -236,6 +268,15 @@ h2 {
   min-height: 230px;
 }
 
+.grid .card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(189, 199, 209, 0.42);
+  box-shadow:
+    0 20px 46px rgba(0, 0, 0, 0.58),
+    0 0 0 1px rgba(197, 205, 214, 0.05),
+    0 0 26px rgba(197, 205, 214, 0.1);
+}
+
 #about,
 #projects {
   grid-column: span 7;
@@ -244,6 +285,26 @@ h2 {
 #skills,
 #contact {
   grid-column: span 5;
+}
+
+#about {
+  --section-accent: #94a7b9;
+  --section-glow: rgba(148, 167, 185, 0.17);
+}
+
+#skills {
+  --section-accent: #8baea6;
+  --section-glow: rgba(139, 174, 166, 0.16);
+}
+
+#projects {
+  --section-accent: #9d95b7;
+  --section-glow: rgba(157, 149, 183, 0.15);
+}
+
+#contact {
+  --section-accent: #c1a58f;
+  --section-glow: rgba(193, 165, 143, 0.14);
 }
 
 p {
@@ -259,6 +320,10 @@ p {
 
 .list li {
   margin-bottom: 0.35rem;
+}
+
+.list li::marker {
+  color: var(--section-accent, #b6c1cc);
 }
 
 .contact-actions {
@@ -339,6 +404,12 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   .binary-bg p {
     animation: none;
+  }
+
+  .card,
+  .grid .card:hover,
+  .hero-links a:hover {
+    transform: none;
   }
 
   body::before {
