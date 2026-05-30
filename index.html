@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliwkukh | Визитка</title>
+  <meta
+    name="description"
+    content="Личная визитка в тёмной матовой эстетике: обо мне, проекты, контакты и формат сотрудничества."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <main class="container">
+    <header class="hero card">
+      <p class="eyebrow">personal card</p>
+      <h1>Aliwkukh</h1>
+      <p class="lead">
+        Frontend-разработка с акцентом на чистый UI, понятную структуру и визуальную эстетику.
+      </p>
+      <nav class="hero-links">
+        <a href="#about">Обо мне</a>
+        <a href="#skills">Навыки</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <section class="grid">
+      <article class="card" id="about">
+        <h2>Обо мне</h2>
+        <p>
+          Работаю с современным фронтендом и люблю делать спокойные, аккуратные интерфейсы.
+          В приоритете - чистый код, понятная навигация и внимание к деталям.
+        </p>
+      </article>
+
+      <article class="card" id="skills">
+        <h2>Навыки</h2>
+        <ul class="list">
+          <li>HTML5 / CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Responsive верстка</li>
+          <li>UI анимации и micro-interactions</li>
+          <li>Оптимизация производительности</li>
+        </ul>
+      </article>
+
+      <article class="card" id="projects">
+        <h2>Проекты</h2>
+        <p>Несколько примеров того, чем я могу быть полезен:</p>
+        <ul class="list">
+          <li>Лендинги и сайты-визитки под ключ</li>
+          <li>Редизайн существующих интерфейсов</li>
+          <li>Адаптация под мобильные устройства</li>
+          <li>Поддержка и развитие frontend-части</li>
+        </ul>
+      </article>
+
+      <article class="card" id="contact">
+        <h2>Контакты</h2>
+        <p>Открыт к сотрудничеству и новым задачам.</p>
+        <ul class="list">
+          <li>Email: <a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li>Telegram: <a href="https://t.me/username" target="_blank" rel="noreferrer">@username</a></li>
+          <li>GitHub: <a href="https://github.com/Qumaqwe" target="_blank" rel="noreferrer">Qumaqwe</a></li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Aliwkukh. Crafted with intention.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
