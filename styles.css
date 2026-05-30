@@ -54,15 +54,15 @@ body {
   letter-spacing: 0.25em;
   color: #96a2ad;
   text-transform: uppercase;
-  animation: code-flow 26s linear infinite;
+  animation: code-flow 18s linear infinite;
 }
 
-.binary-bg p:nth-child(1) { top: 10%; animation-duration: 34s; }
-.binary-bg p:nth-child(2) { top: 24%; animation-duration: 28s; animation-delay: -7s; }
-.binary-bg p:nth-child(3) { top: 38%; animation-duration: 31s; animation-delay: -3s; }
-.binary-bg p:nth-child(4) { top: 52%; animation-duration: 23s; animation-delay: -11s; }
-.binary-bg p:nth-child(5) { top: 67%; animation-duration: 29s; animation-delay: -5s; }
-.binary-bg p:nth-child(6) { top: 82%; animation-duration: 25s; animation-delay: -13s; }
+.binary-bg p:nth-child(1) { top: 10%; animation-duration: 22s; }
+.binary-bg p:nth-child(2) { top: 24%; animation-duration: 18s; animation-delay: -6s; }
+.binary-bg p:nth-child(3) { top: 38%; animation-duration: 20s; animation-delay: -2s; }
+.binary-bg p:nth-child(4) { top: 52%; animation-duration: 15s; animation-delay: -9s; }
+.binary-bg p:nth-child(5) { top: 67%; animation-duration: 19s; animation-delay: -4s; }
+.binary-bg p:nth-child(6) { top: 82%; animation-duration: 16s; animation-delay: -11s; }
 
 @keyframes code-flow {
   0% { transform: translateX(0); }
