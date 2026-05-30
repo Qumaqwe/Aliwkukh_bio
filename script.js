@@ -116,12 +116,37 @@ function applyLanguage(language) {
   }
 }
 
+function detectBrowserLanguage() {
+  const browserLanguages = Array.isArray(navigator.languages) && navigator.languages.length > 0
+    ? navigator.languages
+    : [navigator.language || "en"];
+
+  for (const language of browserLanguages) {
+    const normalized = String(language).toLowerCase();
+
+    if (normalized.startsWith("ru")) {
+      return "ru";
+    }
+    if (normalized.startsWith("de")) {
+      return "de";
+    }
+    if (normalized.startsWith("en")) {
+      return "en";
+    }
+  }
+
+  return "en";
+}
+
 if (yearElement) {
   yearElement.textContent = String(new Date().getFullYear());
 }
 
 const savedLanguage = localStorage.getItem("site-lang");
-const initialLanguage = savedLanguage && translations[savedLanguage] ? savedLanguage : "ru";
+const initialLanguage =
+  savedLanguage && translations[savedLanguage]
+    ? savedLanguage
+    : detectBrowserLanguage();
 
 applyLanguage(initialLanguage);
 
