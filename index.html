@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aliwkukh | Визитка</title>
+  <title>Aliwkukh | AppSec Profile</title>
   <meta
     name="description"
-    content="Личная AppSec-визитка: аудит рисков, secure-by-design подход, контакты и проекты."
+    content="AppSec profile: risk review, secure-by-design approach, contacts and projects."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,62 +28,72 @@
   <div class="grain"></div>
   <main class="container">
     <header class="hero card">
-      <p class="eyebrow">application security profile</p>
+      <div class="hero-topline">
+        <p class="eyebrow" data-i18n="eyebrow">application security profile</p>
+        <label class="lang-picker">
+          <span data-i18n="langLabel">Language</span>
+          <select id="lang-switch" aria-label="Language selector">
+            <option value="ru">RU</option>
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+          </select>
+        </label>
+      </div>
       <h1>Aliwkukh</h1>
-      <p class="lead">
+      <p class="lead" data-i18n="lead">
         AppSec-практика с фокусом на безопасную архитектуру, снижение рисков и устойчивость продукта.
       </p>
       <nav class="hero-links">
-        <a href="https://github.com/Qumaqwe" target="_blank" rel="noreferrer">Проекты</a>
-        <a href="https://t.me/luujd" target="_blank" rel="noreferrer">Связаться</a>
+        <a href="https://github.com/Qumaqwe" target="_blank" rel="noreferrer" data-i18n="projectsBtn">Проекты</a>
+        <a href="https://t.me/luujd" target="_blank" rel="noreferrer" data-i18n="contactBtn">Связаться</a>
       </nav>
     </header>
 
     <section class="grid">
       <article class="card" id="about">
-        <h2>Обо мне</h2>
-        <p>
+        <h2 data-i18n="aboutTitle">Обо мне</h2>
+        <p data-i18n="aboutText">
           Развиваюсь в направлении Application Security: помогаю командам находить уязвимости раньше,
           выстраивать secure-by-default подход и укреплять процессы разработки.
         </p>
       </article>
 
       <article class="card" id="skills">
-        <h2>AppSec стек</h2>
+        <h2 data-i18n="stackTitle">AppSec стек</h2>
         <ul class="list">
-          <li>Threat Modeling и security review</li>
-          <li>SAST / dependency scanning</li>
-          <li>OWASP Top 10 и secure coding практики</li>
-          <li>Hardening CI/CD и базовые security gates</li>
-          <li>Документация и security awareness</li>
+          <li data-i18n="stack1">Threat Modeling и security review</li>
+          <li data-i18n="stack2">SAST / dependency scanning</li>
+          <li data-i18n="stack3">OWASP Top 10 и secure coding практики</li>
+          <li data-i18n="stack4">Hardening CI/CD и базовые security gates</li>
+          <li data-i18n="stack5">Документация и security awareness</li>
         </ul>
       </article>
 
       <article class="card" id="projects">
-        <h2>Что делаю</h2>
-        <p>Какую ценность могу дать проекту:</p>
+        <h2 data-i18n="valueTitle">Что делаю</h2>
+        <p data-i18n="valueLead">Какую ценность могу дать проекту:</p>
         <ul class="list">
-          <li>Аудит рисков на уровне фич и архитектуры</li>
-          <li>Выявление уязвимостей до продакшна</li>
-          <li>Сопровождение remediation и hardening</li>
-          <li>Поддержка security-культуры внутри команды</li>
+          <li data-i18n="value1">Аудит рисков на уровне фич и архитектуры</li>
+          <li data-i18n="value2">Выявление уязвимостей до продакшна</li>
+          <li data-i18n="value3">Сопровождение remediation и hardening</li>
+          <li data-i18n="value4">Поддержка security-культуры внутри команды</li>
         </ul>
       </article>
 
       <article class="card" id="contact">
-        <h2>Контакты</h2>
-        <p>Открыт к задачам в AppSec, security review и техническому консалтингу.</p>
+        <h2 data-i18n="contactTitle">Контакты</h2>
+        <p data-i18n="contactLead">Открыт к задачам в AppSec, security review и техническому консалтингу.</p>
         <div class="contact-actions">
           <a href="https://t.me/luujd" target="_blank" rel="noreferrer">Telegram: @luujd</a>
-          <a href="https://github.com/Qumaqwe" target="_blank" rel="noreferrer">Открыть GitHub</a>
+          <a href="https://github.com/Qumaqwe" target="_blank" rel="noreferrer" data-i18n="openGithub">Открыть GitHub</a>
         </div>
-        <p class="contact-hint">Основной канал связи: Telegram @luujd.</p>
+        <p class="contact-hint" data-i18n="contactHint">Основной канал связи: Telegram @luujd.</p>
       </article>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Aliwkukh. Crafted with intention.</p>
+    <p>© <span id="year"></span> Aliwkukh. <span data-i18n="footerTagline">Crafted with intention.</span></p>
   </footer>
 
   <script src="script.js"></script>
