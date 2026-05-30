@@ -14,7 +14,7 @@ const translations = {
     contactBtn: "Связаться",
     aboutTitle: "Обо мне",
     aboutText:
-      "Развиваюсь в направлении Application Security: помогаю командам находить уязвимости раньше, выстраивать secure-by-default подход и укреплять процессы разработки.",
+      "Мне 16 лет, развиваюсь в направлении Application Security: помогаю командам находить уязвимости раньше, выстраивать secure-by-default подход и укреплять процессы разработки.",
     stackTitle: "AppSec стек",
     stack1: "Threat Modeling и security review",
     stack2: "SAST / DAST / dependency scanning",
@@ -43,7 +43,7 @@ const translations = {
     contactBtn: "Contact",
     aboutTitle: "About",
     aboutText:
-      "I focus on Application Security: helping teams identify vulnerabilities earlier, implement secure-by-default practices, and strengthen engineering workflows.",
+      "I am 16 years old and focused on Application Security: helping teams identify vulnerabilities earlier, implement secure-by-default practices, and strengthen engineering workflows.",
     stackTitle: "AppSec stack",
     stack1: "Threat modeling and security review",
     stack2: "SAST / DAST and dependency scanning",
@@ -72,7 +72,7 @@ const translations = {
     contactBtn: "Kontakt",
     aboutTitle: "Uber mich",
     aboutText:
-      "Ich arbeite im Bereich Application Security: Ich helfe Teams, Schwachstellen fruher zu finden, secure-by-default umzusetzen und Entwicklungsprozesse zu starken.",
+      "Ich bin 16 Jahre alt und arbeite im Bereich Application Security: Ich helfe Teams, Schwachstellen fruher zu finden, secure-by-default umzusetzen und Entwicklungsprozesse zu starken.",
     stackTitle: "AppSec Stack",
     stack1: "Threat Modeling und Security Review",
     stack2: "SAST / DAST und Dependency Scanning",
