@@ -1,6 +1,7 @@
 const yearElement = document.getElementById("year");
 const langSwitch = document.getElementById("lang-switch");
 const i18nNodes = document.querySelectorAll("[data-i18n]");
+const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const translations = {
   ru: {
@@ -138,6 +139,55 @@ function detectBrowserLanguage() {
   return "en";
 }
 
+function getBinaryChunk() {
+  const length = 4 + Math.floor(Math.random() * 6);
+  let chunk = "";
+
+  for (let i = 0; i < length; i += 1) {
+    chunk += Math.random() > 0.5 ? "1" : "0";
+  }
+
+  return chunk;
+}
+
+function setupCursorBinaryTrail() {
+  if (reduceMotionQuery.matches) {
+    return;
+  }
+
+  const trailLayer = document.createElement("div");
+  trailLayer.className = "cursor-binary-trail";
+  document.body.appendChild(trailLayer);
+
+  let lastSpawn = 0;
+  const spawnIntervalMs = 26;
+
+  window.addEventListener("pointermove", (event) => {
+    if (event.pointerType && event.pointerType !== "mouse") {
+      return;
+    }
+
+    const now = performance.now();
+    if (now - lastSpawn < spawnIntervalMs) {
+      return;
+    }
+    lastSpawn = now;
+
+    const trailBit = document.createElement("span");
+    trailBit.className = "trail-bit";
+    trailBit.textContent = getBinaryChunk();
+    trailBit.style.setProperty("--x", `${event.clientX + 8}px`);
+    trailBit.style.setProperty("--y", `${event.clientY + 8}px`);
+    trailBit.style.setProperty("--drift-x", `${(Math.random() * 18 - 9).toFixed(1)}px`);
+    trailBit.style.setProperty("--drift-y", `${(-8 - Math.random() * 18).toFixed(1)}px`);
+    trailLayer.appendChild(trailBit);
+
+    setTimeout(() => {
+      trailBit.remove();
+    }, 760);
+  });
+}
+
 if (yearElement) {
   yearElement.textContent = String(new Date().getFullYear());
 }
@@ -149,6 +199,7 @@ const initialLanguage =
     : detectBrowserLanguage();
 
 applyLanguage(initialLanguage);
+setupCursorBinaryTrail();
 
 if (langSwitch) {
   langSwitch.value = initialLanguage;

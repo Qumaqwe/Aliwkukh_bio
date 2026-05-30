@@ -79,6 +79,44 @@ body {
   z-index: 0;
 }
 
+.cursor-binary-trail {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.trail-bit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "Inter", monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  color: rgba(206, 218, 229, 0.72);
+  text-shadow: 0 0 8px rgba(206, 218, 229, 0.24);
+  transform: translate3d(var(--x), var(--y), 0);
+  animation: binary-trail-fade 720ms ease-out forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes binary-trail-fade {
+  0% {
+    opacity: 0.9;
+    transform: translate3d(var(--x), var(--y), 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(
+      calc(var(--x) + var(--drift-x)),
+      calc(var(--y) + var(--drift-y)),
+      0
+    ) scale(0.9);
+  }
+}
+
 /* Subtle SOC-style scanline overlay without hurting readability */
 body::before {
   content: "";
@@ -414,5 +452,9 @@ a:hover {
 
   body::before {
     background: none;
+  }
+
+  .cursor-binary-trail {
+    display: none;
   }
 }
