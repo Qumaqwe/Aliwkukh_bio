@@ -75,6 +75,14 @@ body {
 .binary-bg p:nth-child(14) { top: 49%; animation-duration: 9.4s; animation-delay: -11s; --drift: -6px; }
 .binary-bg p:nth-child(15) { top: 73%; animation-duration: 8.6s; animation-delay: -7s; --drift: 9px; }
 .binary-bg p:nth-child(16) { top: 84%; animation-duration: 9.1s; animation-delay: -10s; --drift: -5px; }
+.binary-bg p:nth-child(17) { top: 6%; animation-duration: 8.1s; animation-delay: -12s; --drift: 7px; }
+.binary-bg p:nth-child(18) { top: 14%; animation-duration: 9.3s; animation-delay: -6s; --drift: -7px; }
+.binary-bg p:nth-child(19) { top: 23%; animation-duration: 8.7s; animation-delay: -13s; --drift: 8px; }
+.binary-bg p:nth-child(20) { top: 32%; animation-duration: 9.9s; animation-delay: -9s; --drift: -6px; }
+.binary-bg p:nth-child(21) { top: 46%; animation-duration: 8.3s; animation-delay: -14s; --drift: 10px; }
+.binary-bg p:nth-child(22) { top: 58%; animation-duration: 9.5s; animation-delay: -8s; --drift: -8px; }
+.binary-bg p:nth-child(23) { top: 76%; animation-duration: 8.8s; animation-delay: -11s; --drift: 9px; }
+.binary-bg p:nth-child(24) { top: 90%; animation-duration: 9.2s; animation-delay: -15s; --drift: -6px; }
 
 @keyframes code-chaos {
   0% {
