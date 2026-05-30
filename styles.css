@@ -1,13 +1,13 @@
 :root {
-  --bg-main: #111214;
-  --bg-soft: #17191d;
-  --card-bg: rgba(24, 26, 30, 0.82);
-  --card-border: rgba(207, 189, 145, 0.22);
-  --text-main: #ebe7de;
-  --text-muted: #b8b0a2;
-  --accent: #c5ab74;
-  --accent-soft: rgba(197, 171, 116, 0.26);
-  --shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  --bg-main: #f5f1e7;
+  --bg-soft: #efe8da;
+  --card-bg: rgba(255, 251, 244, 0.8);
+  --card-border: rgba(171, 146, 97, 0.3);
+  --text-main: #322920;
+  --text-muted: #8d7e67;
+  --accent: #a4834f;
+  --accent-soft: rgba(164, 131, 79, 0.3);
+  --shadow: 0 16px 40px rgba(97, 78, 45, 0.18);
 }
 
 *,
@@ -25,8 +25,8 @@ body {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(140% 120% at 100% 0%, #1f2024 0%, transparent 45%),
-    radial-gradient(120% 100% at 0% 100%, #181a1f 0%, transparent 52%),
+    radial-gradient(140% 120% at 100% 0%, #f9f5eb 0%, transparent 45%),
+    radial-gradient(120% 100% at 0% 100%, #ece3d3 0%, transparent 52%),
     var(--bg-main);
   color: var(--text-main);
   font-family: "Inter", sans-serif;
@@ -39,7 +39,7 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(109, 91, 61, 0.08) 1px, transparent 1px);
   background-size: 3px 3px;
   opacity: 0.25;
 }
@@ -88,12 +88,12 @@ h1 {
 
 h2 {
   font-size: clamp(1.55rem, 3vw, 2.2rem);
-  color: #efe5d2;
+  color: #3a2e22;
 }
 
 .lead {
   max-width: 52ch;
-  color: #d6cdbc;
+  color: #5b4b38;
   margin: 0;
 }
 
@@ -115,13 +115,13 @@ h2 {
 
 .hero-links a:hover {
   border-color: var(--accent);
-  color: #fbf3e2;
+  color: #2d2218;
   transform: translateY(-1px);
 }
 
 .hero-links a.is-active {
   border-color: var(--accent);
-  color: #fbf3e2;
+  color: #2d2218;
 }
 
 .grid {
@@ -146,13 +146,13 @@ h2 {
 
 p {
   margin: 0;
-  color: #d6d0c3;
+  color: #5b4f40;
 }
 
 .list {
   margin: 0.8rem 0 0;
   padding-left: 1rem;
-  color: #cfc8b8;
+  color: #635545;
 }
 
 .list li {
@@ -182,26 +182,26 @@ p {
 .contact-actions a:hover,
 .contact-actions button:hover {
   border-color: var(--accent);
-  color: #fbf3e2;
+  color: #2d2218;
 }
 
 .contact-hint {
   margin-top: 0.7rem;
-  color: #9f9686;
+  color: #8f8168;
   font-size: 0.93rem;
 }
 
 a {
-  color: #ecd6a6;
+  color: #7f6337;
 }
 
 a:hover {
-  color: #f5e7c4;
+  color: #5b4425;
 }
 
 .footer {
   text-align: center;
-  color: #9e9482;
+  color: #8f7f64;
   padding: 0.6rem 1rem 2rem;
   position: relative;
   z-index: 1;
