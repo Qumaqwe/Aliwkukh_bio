@@ -150,6 +150,11 @@ function getBinaryChunk() {
   return chunk;
 }
 
+function getBurstSymbol() {
+  const symbols = ["0", "1", "{", "}", "<", ">", "/", "\\", "#", "*", ";", ":"];
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
 function setupCursorBinaryTrail() {
   if (reduceMotionQuery.matches) {
     return;
@@ -185,6 +190,36 @@ function setupCursorBinaryTrail() {
     setTimeout(() => {
       trailBit.remove();
     }, 760);
+  });
+
+  window.addEventListener("pointerdown", (event) => {
+    if (event.pointerType && event.pointerType !== "mouse") {
+      return;
+    }
+    if (event.button !== 0) {
+      return;
+    }
+
+    const burstCount = 16;
+    for (let i = 0; i < burstCount; i += 1) {
+      const burstBit = document.createElement("span");
+      const angle = Math.random() * Math.PI * 2;
+      const distance = 20 + Math.random() * 38;
+      const driftX = Math.cos(angle) * distance;
+      const driftY = Math.sin(angle) * distance;
+
+      burstBit.className = "trail-burst-symbol";
+      burstBit.textContent = getBurstSymbol();
+      burstBit.style.setProperty("--x", `${event.clientX}px`);
+      burstBit.style.setProperty("--y", `${event.clientY}px`);
+      burstBit.style.setProperty("--drift-x", `${driftX.toFixed(2)}px`);
+      burstBit.style.setProperty("--drift-y", `${driftY.toFixed(2)}px`);
+      trailLayer.appendChild(burstBit);
+
+      setTimeout(() => {
+        burstBit.remove();
+      }, 600);
+    }
   });
 }
 

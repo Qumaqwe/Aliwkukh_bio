@@ -101,6 +101,20 @@ body {
   will-change: transform, opacity;
 }
 
+.trail-burst-symbol {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "Inter", monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(231, 238, 245, 0.9);
+  text-shadow: 0 0 10px rgba(216, 227, 238, 0.3);
+  transform: translate3d(var(--x), var(--y), 0);
+  animation: binary-burst-fade 580ms ease-out forwards;
+  will-change: transform, opacity;
+}
+
 @keyframes binary-trail-fade {
   0% {
     opacity: 0.9;
@@ -114,6 +128,22 @@ body {
       calc(var(--y) + var(--drift-y)),
       0
     ) scale(0.9);
+  }
+}
+
+@keyframes binary-burst-fade {
+  0% {
+    opacity: 0.95;
+    transform: translate3d(var(--x), var(--y), 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(
+      calc(var(--x) + var(--drift-x)),
+      calc(var(--y) + var(--drift-y)),
+      0
+    ) scale(0.82);
   }
 }
 
