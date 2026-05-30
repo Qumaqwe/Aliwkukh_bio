@@ -1,13 +1,13 @@
 :root {
-  --bg-main: #0b1220;
-  --bg-soft: #131d31;
-  --card-bg: rgba(21, 43, 66, 0.88);
-  --card-border: rgba(111, 149, 186, 0.4);
-  --text-main: #d6e7f7;
-  --text-muted: #9fb7ce;
-  --accent: #7cc2ff;
-  --accent-soft: rgba(124, 194, 255, 0.38);
-  --shadow: 0 16px 40px rgba(2, 10, 22, 0.45);
+  --bg-main: #0a0b0d;
+  --bg-soft: #15181d;
+  --card-bg: rgba(24, 28, 33, 0.9);
+  --card-border: rgba(139, 151, 162, 0.32);
+  --text-main: #d9dee4;
+  --text-muted: #99a3ad;
+  --accent: #b6c1cc;
+  --accent-soft: rgba(182, 193, 204, 0.34);
+  --shadow: 0 18px 42px rgba(0, 0, 0, 0.52);
 }
 
 *,
@@ -25,8 +25,8 @@ body {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(120% 110% at 0% 0%, #182743 0%, transparent 44%),
-    radial-gradient(140% 120% at 100% 100%, #0d172a 0%, transparent 50%),
+    radial-gradient(120% 110% at 0% 0%, #171b21 0%, transparent 44%),
+    radial-gradient(140% 120% at 100% 100%, #0d0f13 0%, transparent 50%),
     var(--bg-main);
   color: var(--text-main);
   font-family: "Inter", sans-serif;
@@ -41,7 +41,7 @@ body {
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.24;
+  opacity: 0.16;
 }
 
 .binary-bg p {
@@ -52,7 +52,7 @@ body {
   font-family: "Inter", monospace;
   font-size: clamp(0.65rem, 1.2vw, 0.9rem);
   letter-spacing: 0.25em;
-  color: #9ad9ff;
+  color: #96a2ad;
   text-transform: uppercase;
   animation: code-flow 26s linear infinite;
 }
@@ -73,10 +73,27 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(rgba(127, 174, 214, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(164, 171, 178, 0.08) 1px, transparent 1px);
   background-size: 3px 3px;
-  opacity: 0.22;
+  opacity: 0.2;
   z-index: 0;
+}
+
+/* Subtle SOC-style scanline overlay without hurting readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02) 0,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  opacity: 0.13;
 }
 
 .container {
@@ -93,26 +110,31 @@ body {
   padding: 1.5rem 1.35rem;
   box-shadow: var(--shadow);
   backdrop-filter: blur(5px);
-  color: #e9f4ff;
+  color: #e3e8ee;
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.52),
+    0 0 0 1px rgba(197, 205, 214, 0.03),
+    0 0 24px rgba(197, 205, 214, 0.08);
 }
 
 .card h1,
 .card h2 {
-  color: #f3f9ff;
+  color: #f1f4f7;
+  text-shadow: 0 0 8px rgba(241, 244, 247, 0.08);
 }
 
 .card p,
 .card .list,
 .card .eyebrow {
-  color: #c9deef;
+  color: #c5cfd8;
 }
 
 .card a {
-  color: #9cd4ff;
+  color: #d3dbe3;
 }
 
 .card a:hover {
-  color: #c0e6ff;
+  color: #f0f4f8;
 }
 
 .hero {
@@ -143,12 +165,12 @@ h1 {
 
 h2 {
   font-size: clamp(1.55rem, 3vw, 2.2rem);
-  color: #f3f9ff;
+  color: #f1f4f7;
 }
 
 .lead {
   max-width: 52ch;
-  color: #cde0f1;
+  color: #c3ccd6;
   margin: 0;
 }
 
@@ -160,7 +182,7 @@ h2 {
 }
 
 .hero-links a {
-  color: #eef5fb;
+  color: #e7ecf1;
   text-decoration: none;
   border: 1px solid var(--accent-soft);
   border-radius: 999px;
@@ -170,13 +192,14 @@ h2 {
 
 .hero-links a:hover {
   border-color: var(--accent);
-  color: #fff7e7;
+  color: #ffffff;
   transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(182, 193, 204, 0.2);
 }
 
 .hero-links a.is-active {
   border-color: var(--accent);
-  color: #fff7e7;
+  color: #ffffff;
 }
 
 .grid {
@@ -201,13 +224,13 @@ h2 {
 
 p {
   margin: 0;
-  color: #d1e2f1;
+  color: #c7d0d9;
 }
 
 .list {
   margin: 0.8rem 0 0;
   padding-left: 1rem;
-  color: #c7dced;
+  color: #bdc8d2;
 }
 
 .list li {
@@ -227,7 +250,7 @@ p {
   border-radius: 999px;
   padding: 0.45rem 0.9rem;
   background: transparent;
-  color: #eef5fb;
+  color: #e7ecf1;
   text-decoration: none;
   font: inherit;
   cursor: pointer;
@@ -237,26 +260,27 @@ p {
 .contact-actions a:hover,
 .contact-actions button:hover {
   border-color: var(--accent);
-  color: #fff7e7;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(182, 193, 204, 0.2);
 }
 
 .contact-hint {
   margin-top: 0.7rem;
-  color: #afc9dd;
+  color: #9ca8b2;
   font-size: 0.93rem;
 }
 
 a {
-  color: #8cc9f9;
+  color: #c6d1db;
 }
 
 a:hover {
-  color: #bbe2ff;
+  color: #eef3f8;
 }
 
 .footer {
   text-align: center;
-  color: #93aec5;
+  color: #8f9aa5;
   padding: 0.6rem 1rem 2rem;
   position: relative;
   z-index: 1;
@@ -286,5 +310,9 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   .binary-bg p {
     animation: none;
+  }
+
+  body::before {
+    background: none;
   }
 }
