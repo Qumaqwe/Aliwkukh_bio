@@ -31,7 +31,6 @@ const translations = {
     contactLead: "Открыт к задачам в AppSec, security review и техническому консалтингу.",
     openGithub: "Открыть GitHub",
     contactHint: "Основной канал связи: Telegram @luujd.",
-    footerTagline: "Crafted with intention.",
   },
   en: {
     pageTitle: "Aliwkukh | AppSec Profile",
@@ -60,7 +59,6 @@ const translations = {
     contactLead: "Open to AppSec tasks, security reviews, and technical consulting.",
     openGithub: "Open GitHub",
     contactHint: "Primary contact channel: Telegram @luujd.",
-    footerTagline: "Crafted with intention.",
   },
   de: {
     pageTitle: "Aliwkukh | AppSec Profil",
@@ -89,7 +87,6 @@ const translations = {
     contactLead: "Offen fur AppSec-Aufgaben, Security Reviews und technisches Consulting.",
     openGithub: "GitHub offnen",
     contactHint: "Primarer Kontaktkanal: Telegram @luujd.",
-    footerTagline: "Crafted with intention.",
   },
 };
 
