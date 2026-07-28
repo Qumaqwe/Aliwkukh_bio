@@ -14,7 +14,7 @@ const translations = {
     contactBtn: "Связаться",
     aboutTitle: "Обо мне",
     aboutText:
-      "Мне 16 лет, развиваюсь в направлении Application Security: помогаю командам находить уязвимости раньше, выстраивать secure-by-default подход и укреплять процессы разработки.",
+      "Мне 17 лет, развиваюсь в направлении Application Security: помогаю командам находить уязвимости раньше, выстраивать secure-by-default подход и укреплять процессы разработки.",
     stackTitle: "AppSec стек",
     stack1: "Threat Modeling и security review",
     stack2: "SAST / DAST / dependency scanning",
